@@ -1,0 +1,99 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourHOTEL</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="brand">
+                Your <span>HOTEL</span>
+            </h2>
+
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'benefits' %}">Benefits</a>
+            <a href="#contact">Contact</a>
+            <a href="{% url 'book' %}">Book</a>
+
+            
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="{% static 'images/hotel1.jpg' %}">
+
+            <img src="{% static 'images/hotel2.jpg' %}">
+
+            <img src="{% static 'images/hotel3.jpg' %}">
+
+        </div>
+    </div>
+   <div class="booking-box">
+     <h3>Book your room</h3>
+     <a href="{% url 'book' %}" class="book-btn">Book</a>
+
+   </div>
+
+   <div class="hotel-info">
+
+        <div class="hotel-image">
+           <img src="{% static 'images/hotel4.jpg' %}">
+
+        </div>
+
+    <!-- Instructions -->
+        <div class="instructions">
+            <h3>Guest Instructions</h3>
+            <ul>
+                <li>Advance booking is recommended.</li>
+                <li>Valid ID proof is required at check-in.</li>
+                <li>Please maintain cleanliness in the room.</li>
+                <li>Smoking is allowed only in designated areas.</li>
+                <li>Maintain silence between 10:00 PM – 7:00 AM.</li>
+                <li>Hotel is not responsible for personal valuables.</li>
+                <li>Free cancellation up to 24 hours before check-in.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+            <h3>Your HOTEL</h3>
+            <p>📞 9348296013</p>
+            <p>✉️ yourhotel@gmail.com</p>
+        </div>
+
+    
+        <div class="contact-form" id="contact">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Contact Number" required>
+                <textarea placeholder="Your Message" rows="4"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </section>
+
+
+
+    <footer class="simple-footer">
+        <p>© 2026 Your HOTEL. All rights reserved.</p>
+    </footer>
+
+
+
+</body>
+</html>
